@@ -1,5 +1,6 @@
 jobs:
   my_first_job:
+    on: [push]
     runs-on: ubuntu-latest
     steps:
       # This step checks out a copy of your repository.
