@@ -2,12 +2,18 @@ name: learn-github-actions
 on: [push]
 
 jobs:
-  my_first_job:
+  example-job:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
-      # This step checks out a copy of your repository.
-      - name: My first step - check out repository
+      - name: Check out the repository to the runner
         uses: actions/checkout@v4
-      # This step references the directory that contains the action.
-      - name: Use local hello-world-action
-        uses: ./.github/actions/hello-world-action
+      - name: ls -al
+        run: ls -al
+        run: pwd
+      # - name: Run a script
+      #   run: ./my-script.sh
+      # - name: Run another script
+      #   run: ./my-other-script.sh
