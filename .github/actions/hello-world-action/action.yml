@@ -1,9 +1,10 @@
-name: learn-github-actions
-on: [push]
+name: Test
+description: "composite run action"
 
-jobs:
-  example-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: My first step
-        run: sh echo hello
+runs:
+  using: "composite"
+  steps:
+    - name: Echo
+      shell: bash
+      run: |
+        echo Heyyyyy
