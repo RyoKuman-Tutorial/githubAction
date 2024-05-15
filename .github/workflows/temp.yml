@@ -2,7 +2,7 @@ name: learn-github-actions
 on: [push]
 
 jobs:
-  example-job:
+  test-job:
     runs-on: ubuntu-latest
     defaults:
       run:
